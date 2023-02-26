@@ -1,18 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App - Nadine"/>
+  <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
+  <div class="container">
+    <Home/>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
   }
 }
 </script>
+
 
 <style>
 #app {
@@ -20,7 +24,22 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
   margin-top: 60px;
 }
-</style>
+
+.container{
+  display:grid;
+  grid-template-columns: auto;
+  margin:0 20% 0 20%;
+
+}
+.logo{
+  width:300px;
+    
+  }
+
+h1{
+  color:#483016;
+}
+</style>    

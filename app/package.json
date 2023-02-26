@@ -5,13 +5,16 @@
   "scripts": {
     "start": "node server.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service build --mode development",
+    "watch": "vue-cli-service build --watch"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "express": "^4.18.2",
     "serve-static": "^1.15.0",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
