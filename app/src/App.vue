@@ -2,17 +2,20 @@
   <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
   <div class="container">
     <Home/>
+    <About/>
   </div>
   
 </template>
 
 <script>
 import Home from './components/Home.vue'
+import About from './components/About.vue'
 
 export default {
   name: 'App',
   components: {
-    Home
+    Home,
+    About
   }
 }
 </script>
