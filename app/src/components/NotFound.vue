@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>About</h1>
+    <h1>Not found</h1>
     <p>
       Wir bringen dich mit unseren Melodien in den Rausch der Jazz Musik. Nebst dem typischen Swing spielen wir Funk, Pop und Rock Arrangements. Der Kern hat AIRWIN’s Big Band im Sensebezirk, Freiburg. Mittlerweile wirken aber regelmässig auch Talente aus Bern, Basel oder der Romandie mit. Bandleader ist Erwin Mülhauser, der der Band auch ihren Namen gibt.
     </p>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'NotFound',
   props: {
     
   }

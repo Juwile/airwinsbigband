@@ -1,18 +1,45 @@
 <template>
   <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
+  <a href="#/">Home</a> |
+  <a href="#/about">About</a> |
+  <a href="#/non-existent-path">Broken Link</a>
   <div class="container">
-    <Home/>
+    <component :is="currentView" />
   </div>
-  
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import HomeComponent from './components/HomeComponent.vue'
+import AboutComponent from './components/AboutComponent.vue'
+import NotFound from './components/NotFound.vue'
+
+const routes = {
+  '/': HomeComponent,
+  '/about': AboutComponent
+}
 
 export default {
   name: 'App',
   components: {
-    Home
+    HomeComponent,
+    AboutComponent
+  },
+  
+  // Routing
+  data() {
+    return {
+      currentPath: window.location.hash
+    }
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || '/'] || NotFound
+    }
+  },
+  mounted() {
+    window.addEventListener('hashchange', () => {
+      this.currentPath = window.location.hash
+    })
   }
 }
 </script>
