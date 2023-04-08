@@ -27,6 +27,7 @@ export default {
     Home,
     About
   },
+  
   // Routing
   data() {
     return {
