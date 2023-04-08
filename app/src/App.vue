@@ -1,8 +1,12 @@
 <template>
-  <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
-  <a href="#/">Home</a> |
-  <a href="#/about">About</a> |
-  <a href="#/non-existent-path">Broken Link</a>
+  <header>
+    <nav>
+      <a href="#/">Home</a> |
+      <a href="#/about">About</a> |
+      <a href="#/non-existent-path">Broken Link</a>
+    </nav>
+    <a class="logo-container" href="#/"><img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png" ></a>
+  </header>
   <div class="container">
     <component :is="currentView" />
   </div>
@@ -46,27 +50,86 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-  margin-top: 60px;
 }
+
+header{
+  padding-top: 1em;
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: 2;
+
+}
+
+nav{
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2em;
+  font-family: 'Shadows Into Light Two', cursive;
+
+}
+
+a{
+  padding-right: 1em;
+  padding-left: 1em;
+  text-decoration: none;
+  color:#483016;
+  
+
+
+}
+
+a:link{
+  color:#483016;
+  
+}
+a:visited{
+  color:#483016;
+}
+
+a:hover{
+  color:red;
+}
+
+a:active{
+  color:blue;
+}
+
+.logo{
+  width:200px;
+  
+  }
+
+  .logo-container{
+    grid-column: 2 / 2;
+    display: flex;
+    justify-self: flex-end;
+    margin-right: 1em;
+  }
 
 .container{
   display:grid;
   grid-template-columns: auto;
-  margin:0 20% 0 20%;
+  margin:0 10% 0 10%;
 
 }
-.logo{
-  width:300px;
-    
-  }
 
-h1{
+h1,h2{
   color:#483016;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+h2{
+  text-align: left;
+}
+
+p{
+  font-size: 1.2em;
 }
 </style>    
