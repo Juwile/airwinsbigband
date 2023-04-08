@@ -1,6 +1,6 @@
 <template>
   <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
-  <a href="#/">Home</a> |
+  <a href="#/">Home3</a> |
   <a href="#/about">About</a> |
   <a href="#/non-existent-path">Broken Link</a>
   <div class="container">
@@ -27,6 +27,7 @@ export default {
     Home,
     About
   },
+  // Routing
   data() {
     return {
       currentPath: window.location.hash
