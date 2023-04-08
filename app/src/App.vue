@@ -1,31 +1,28 @@
 <template>
   <img alt="Logo AIRWIN's Big Band" class="logo" src="./assets/logo_abb.png">
-  <a href="#/">Home3</a> |
+  <a href="#/">Home</a> |
   <a href="#/about">About</a> |
   <a href="#/non-existent-path">Broken Link</a>
   <div class="container">
     <component :is="currentView" />
   </div>
-  
-  
-  
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import About from './components/About.vue'
+import HomeComponent from './components/HomeComponent.vue'
+import AboutComponent from './components/AboutComponent.vue'
 import NotFound from './components/NotFound.vue'
 
 const routes = {
-  '/': Home,
-  '/about': About
+  '/': HomeComponent,
+  '/about': AboutComponent
 }
 
 export default {
   name: 'App',
   components: {
-    Home,
-    About
+    HomeComponent,
+    AboutComponent
   },
   
   // Routing
@@ -41,8 +38,8 @@ export default {
   },
   mounted() {
     window.addEventListener('hashchange', () => {
-		  this.currentPath = window.location.hash
-		})
+      this.currentPath = window.location.hash
+    })
   }
 }
 </script>
